@@ -1,4 +1,4 @@
-name: Build Versioned Alpine Images for EasySwoole
+name: Build Versioned Alpine Images for EasySwoole 73
 
 on:
   push:
