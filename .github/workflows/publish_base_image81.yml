@@ -37,7 +37,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: php8/php8.1.22/alpine/3.16/base/Dockerfile
+          file: dockerfiles/php8/8.1.22/alpine/3.16/base/Dockerfile
           platforms: linux/amd64,linux/arm64/v8,linux/ppc64le,linux/s390x
           push: true
           tags: |
