@@ -55,6 +55,8 @@ RUN set -ex \
     php81-xmlwriter \
     php81-pcntl \
     php81-opcache \
+    php81-mysqli \
+    php81-mongodb \
     && ln -sf /usr/bin/php81 /usr/bin/php \
     && apk del --purge *-dev \
     && rm -rf /var/cache/apk/* /tmp/* /usr/share/man /usr/share/php81 \
