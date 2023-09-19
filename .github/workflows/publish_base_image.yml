@@ -37,8 +37,8 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: dockerfiles/php7/7.3.33/alpine/3.12/base/Dockerfile
+          file: dockerfiles/php8/8.1.22/alpine/3.16/base/Dockerfile
           platforms: linux/amd64,linux/arm64/v8,linux/ppc64le,linux/s390x
           push: true
           tags: |
-            easyswoolexuesi2021/php:7.3.33-alpine3.12-base
+            easyswoolexuesi2021/php:8.1.22-alpine3.16-base
