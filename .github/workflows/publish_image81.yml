@@ -38,7 +38,7 @@ jobs:
         with:
           context: .
           file: dockerfiles/php8/8.1.22/alpine/3.16/swoole/5.1.1/Dockerfile
-          platforms: linux/amd64,linux/arm64/v8,linux/ppc64le
+          platforms: linux/amd64,linux/arm64/v8
           push: true
           tags: |
             easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole5.1.1
