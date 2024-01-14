@@ -11,9 +11,10 @@ LABEL maintainer="EasySwoole Developers https://www.easyswoole.com" version="1.0
 ##
 # ---------- env settings ----------
 ##
+# --build-arg timezone=Asia/Shanghai
 ARG timezone
 
-ENV TIMEZONE=${timezone:-"Asia/Shanghai"}    
+ENV TIMEZONE=${timezone:-"Asia/Shanghai"}
 
 # update
 RUN set -ex \
