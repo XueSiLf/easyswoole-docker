@@ -1,11 +1,9 @@
 name: Build Base Alpine Images for EasySwoole
 
-#on:
-#  schedule:
-#    - cron: '4'
-#  push:
-#    branches:
-#      - 'main'
+on:
+  push:
+    branches:
+      - 'main'
 
 jobs:
   build_base_alpine_images:
