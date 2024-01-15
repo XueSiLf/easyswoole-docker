@@ -21,7 +21,6 @@ ENV TIMEZONE=${timezone:-"Asia/Shanghai"}
 ##
 # ---------- building ----------
 ##
-
 RUN set -ex \
     && apk update \
     && apk add --no-cache \
@@ -30,7 +29,6 @@ RUN set -ex \
     curl \
     tar \
     xz \
-    libressl \
     tzdata \
     pcre \
     php7 \
@@ -43,8 +41,11 @@ RUN set -ex \
     php7-iconv \
     php7-json \
     php7-mbstring \
+    php7-mysqli \
     php7-mysqlnd \
+    php7-opcache \
     php7-openssl \
+    php7-pcntl \
     php7-pdo \
     php7-pdo_mysql \
     php7-pdo_sqlite \
@@ -61,10 +62,12 @@ RUN set -ex \
     php7-zip \
     php7-zlib \
     php7-xml \
+    php7-xmlreader \
     php7-xmlwriter \
+    && ln -sf /usr/bin/php7 /usr/bin/php \
     && apk del --purge *-dev \
     && rm -rf /var/cache/apk/* /tmp/* /usr/share/man /usr/share/php7 \
-    #  ---------- some config,clear work ----------
+    #  ---------- some config ----------
     && cd /etc/php7 \
     # - config PHP
     && { \

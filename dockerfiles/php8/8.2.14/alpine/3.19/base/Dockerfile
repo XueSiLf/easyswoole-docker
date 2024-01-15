@@ -1,11 +1,11 @@
-# Build image for easyswoolexuesi2021/php:7.4.33-alpine3.15-base
+# Build image for easyswoolexuesi2021/php:8.2.14-alpine3.19-base
 #
 # @link     https://www.easyswoole.com
 # @document https://www.easyswoole.com
 # @contact  https://www.easyswoole.com
 # @license  https://github.com/easy-swoole/easyswoole/blob/3.x/LICENSE
 
-FROM alpine:3.15
+FROM alpine:3.19
 
 LABEL maintainer="EasySwoole Developers https://www.easyswoole.com" version="1.0" license="Apache 2.0"
 
@@ -31,45 +31,45 @@ RUN set -ex \
     xz \
     tzdata \
     pcre \
-    php7 \
-    php7-bcmath \
-    php7-curl \
-    php7-ctype \
-    php7-dom \
-    php7-fileinfo \
-    php7-gd \
-    php7-iconv \
-    php7-json \
-    php7-mbstring \
-    php7-mysqli \
-    php7-mysqlnd \
-    php7-opcache \
-    php7-openssl \
-    php7-pcntl \
-    php7-pdo \
-    php7-pdo_mysql \
-    php7-pdo_sqlite \
-    php7-phar \
-    php7-posix \
-    php7-redis \
-    php7-simplexml \
-    php7-sockets \
-    php7-sodium \
-    php7-sysvshm \
-    php7-sysvmsg \
-    php7-sysvsem \
-    php7-tokenizer \
-    php7-zip \
-    php7-zlib \
-    php7-xml \
-    php7-xmlreader \
-    php7-xmlwriter \
-    php7-mongodb \
-    && ln -sf /usr/bin/php7 /usr/bin/php \
+    php82 \
+    php82-bcmath \
+    php82-curl \
+    php82-ctype \
+    php82-dom \
+    php82-fileinfo \
+    php82-gd \
+    php82-iconv \
+    php82-json \
+    php82-mbstring \
+    php82-mysqli \
+    php82-mysqlnd \
+    php82-opcache \
+    php82-openssl \
+    php82-pcntl \
+    php82-pdo \
+    php82-pdo_mysql \
+    php82-pdo_sqlite \
+    php82-phar \
+    php82-posix \
+    php82-redis \
+    php82-simplexml \
+    php82-sockets \
+    php82-sodium \
+    php82-sysvshm \
+    php82-sysvmsg \
+    php82-sysvsem \
+    php82-tokenizer \
+    php82-zip \
+    php82-zlib \
+    php82-xml \
+    php82-xmlreader \
+    php82-xmlwriter \
+    php82-mongodb \
+    && ln -sf /usr/bin/php82 /usr/bin/php \
     && apk del --purge *-dev \
-    && rm -rf /var/cache/apk/* /tmp/* /usr/share/man /usr/share/php7 \
+    && rm -rf /var/cache/apk/* /tmp/* /usr/share/man /usr/share/php82 \
     #  ---------- some config ----------
-    && cd /etc/php7 \
+    && cd /etc/php82 \
     # - config PHP
     && { \
         echo "upload_max_filesize=100M"; \
