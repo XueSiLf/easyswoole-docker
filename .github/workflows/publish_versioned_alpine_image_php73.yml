@@ -11,7 +11,7 @@ jobs:
     if: github.repository == 'xuesilf/easyswoole-docker'
     strategy:
       matrix:
-        swoole: [ "4.4.23" ]
+        swoole: [ "4.4.24" ]
 
     name: The Alpine Image For EasySwoole PHP-7.3 Swoole-${{ matrix.swoole }}
 
