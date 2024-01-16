@@ -9,15 +9,12 @@ FROM easyswoolexuesi2021/php:8.1.22-alpine3.16-base
 
 LABEL maintainer="EasySwoole Developers https://www.easyswoole.com" version="1.0" license="Apache 2.0"
 
-ARG SW_VERSION
-ARG COMPOSER_VERSION
-
 ##
 # ---------- env settings ----------
 ##
 ENV PHP_BUILD_VERSION="81"
-ENV SW_VERSION=${SW_VERSION:-"v5.0.3"} \
-    COMPOSER_VERSION=${COMPOSER_VERSION:-"2.3.10"} \
+ENV SWOOLE_VERSION="5.0.3" \
+    COMPOSER_VERSION="2.3.10" \
     #  install and remove building packages
     PHPIZE_DEPS="autoconf dpkg-dev dpkg file g++ gcc libc-dev make php${PHP_BUILD_VERSION}-dev php${PHP_BUILD_VERSION}-pear pkgconf re2c pcre-dev pcre2-dev zlib-dev libtool automake libaio-dev openssl-dev curl-dev"
 
@@ -29,7 +26,7 @@ RUN set -ex \
     && apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
     # download
     && cd /tmp \
-    && curl -SL "https://github.com/swoole/swoole-src/archive/${SW_VERSION}.tar.gz" -o swoole.tar.gz \
+    && curl -SL "https://github.com/swoole/swoole-src/archive/v${SWOOLE_VERSION}.tar.gz" -o swoole.tar.gz \
     && ls -alh \
     # php extension:swoole
     && cd /tmp \
