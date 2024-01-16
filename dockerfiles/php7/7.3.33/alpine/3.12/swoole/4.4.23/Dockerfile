@@ -43,6 +43,7 @@ RUN set -ex \
         && ./configure --enable-openssl --enable-http2 --enable-mysqlnd --enable-openssl \
         && make -s -j$(nproc) && make install \
     ) \
+    && php --ini \
     && echo "extension=swoole.so" > /etc/php7/conf.d/swoole.ini \
     # clear
     && php -v \
