@@ -11,7 +11,6 @@ jobs:
     if: github.repository == 'xuesilf/easyswoole-docker'
     name: The Base Alpine Image For EasySwoole
     strategy:
-      fail-fast: true
       matrix:
         include:
           - php-prefix: "7"
@@ -25,7 +24,7 @@ jobs:
             alpine: "3.16"
           - php-prefix: "8"
             php: "8.2.8"
-            alpine: "3.16"
+            alpine: "3.18"
           - php-prefix: "8"
             php: "8.2.14"
             alpine: "3.19"
