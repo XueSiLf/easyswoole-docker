@@ -1,25 +1,20 @@
-# easyswoolexuesi2021/easyswoole:php7.3.33-alpine3.12-swoole4.4.26
+# Build image for easyswoolexuesi2021/easyswoole:php8.2.14-alpine3.19-swoole5.0.3
 #
 # @link     https://www.easyswoole.com
 # @document https://www.easyswoole.com
 # @contact  https://www.easyswoole.com
 # @license  https://github.com/easy-swoole/easyswoole/blob/3.x/LICENSE
 
-ARG ALPINE_VERSION
-
-FROM easyswoolexuesi2021/php:8.2.8-alpine${ALPINE_VERSION}-base
+FROM easyswoolexuesi2021/php:8.2.14-alpine3.19-base
 
 LABEL maintainer="EasySwoole Developers https://www.easyswoole.com" version="1.0" license="Apache 2.0"
-
-ARG SW_VERSION
-ARG COMPOSER_VERSION
-ARG PHP_BUILD_VERSION
 
 ##
 # ---------- env settings ----------
 ##
-ENV SW_VERSION=${SW_VERSION:-"v5.0.0"} \
-    COMPOSER_VERSION=${COMPOSER_VERSION:-"2.3.10"} \
+ENV PHP_BUILD_VERSION="82"
+ENV SWOOLE_VERSION="5.0.3" \
+    COMPOSER_VERSION="2.3.10" \
     #  install and remove building packages
     PHPIZE_DEPS="autoconf dpkg-dev dpkg file g++ gcc libc-dev make php${PHP_BUILD_VERSION}-dev php${PHP_BUILD_VERSION}-pear pkgconf re2c pcre-dev pcre2-dev zlib-dev libtool automake libaio-dev openssl-dev curl-dev"
 
@@ -31,7 +26,7 @@ RUN set -ex \
     && apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
     # download
     && cd /tmp \
-    && curl -SL "https://github.com/swoole/swoole-src/archive/${SW_VERSION}.tar.gz" -o swoole.tar.gz \
+    && curl -SL "https://github.com/swoole/swoole-src/archive/v${SWOOLE_VERSION}.tar.gz" -o swoole.tar.gz \
     && ls -alh \
     # php extension:swoole
     && cd /tmp \
@@ -48,7 +43,6 @@ RUN set -ex \
     && echo "memory_limit=1G" > /etc/php${PHP_BUILD_VERSION}/conf.d/00_default.ini \
     && echo "opcache.enable_cli = 'On'" >> /etc/php${PHP_BUILD_VERSION}/conf.d/00_opcache.ini \
     && echo "extension=swoole.so" > /etc/php${PHP_BUILD_VERSION}/conf.d/50_swoole.ini \
-    && echo "swoole.use_shortname = 'Off'" >> /etc/php${PHP_BUILD_VERSION}/conf.d/50_swoole.ini \
     # install composer
     && wget -nv -O /usr/local/bin/composer https://github.com/composer/composer/releases/download/${COMPOSER_VERSION}/composer.phar \
     && chmod u+x /usr/local/bin/composer \
