@@ -14,10 +14,22 @@ jobs:
         include:
           - php: 8.2.8
             alpine: 3.18
-            swoole: [ "4.8.13","5.0.3","5.1.1" ]
+            swoole: "4.8.13"
+          - php: 8.2.8
+            alpine: 3.18
+            swoole: "5.0.3"
+          - php: 8.2.8
+            alpine: 3.18
+            swoole: "5.1.1"
           - php: 8.2.14
             alpine: 3.19
-            swoole: [ "4.8.13","5.0.3","5.1.1" ]
+            swoole: "4.8.13"
+          - php: 8.2.14
+            alpine: 3.19
+            swoole: "5.0.3"
+          - php: 8.2.14
+            alpine: 3.19
+            swoole: "5.1.1"
 
     name: The Alpine Image For EasySwoole PHP-${{ matrix.php }} Swoole-${{ matrix.swoole }}
 
