@@ -6,7 +6,7 @@
 
 假设您的本机环境并不能达到 `EasySwoole` 的环境要求，或对于环境配置不是那么熟悉，那么您可以通过以下方法来运行及开发 `EasySwoole` 项目：
 
-- 启动容器
+### 启动容器
 
 可以根据实际情况，映射到宿主机对应的目录，以下以 `/workspace/project` 为例
 
@@ -21,9 +21,17 @@ docker run --name easyswoole \
 easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13
 ```
 
-你可以选择公共镜像： `easyswoolexuesi2021/easyswoole:php7.3.33-alpine3.12-swoole4.4.26`， `easyswoolexuesi2021/easyswoole:php7.4.33-alpine3.15-swoole4.4.26`， `easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13`， `easyswoolexuesi2021/easyswoole:php8.2.8-alpine3.18-swoole5.0.3`。
+你可以选择公共镜像： 
+- `easyswoolexuesi2021/easyswoole:php7.3.33-alpine3.12-swoole4.4.26`
+- `easyswoolexuesi2021/easyswoole:php7.4.33-alpine3.15-swoole4.4.26`
+- `easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13`
+- `easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole5.1.1`
+- `easyswoolexuesi2021/easyswoole:php8.2.8-alpine3.18-swoole4.8.13`
+- `easyswoolexuesi2021/easyswoole:php8.2.8-alpine3.18-swoole5.1.1`
+- `easyswoolexuesi2021/easyswoole:php8.2.14-alpine3.19-swoole4.8.13`
+- `easyswoolexuesi2021/easyswoole:php8.2.14-alpine3.19-swoole5.1.1`
 
-- 创建项目
+### 创建项目
 
 ```bash
 cd /var/www/project
@@ -35,7 +43,7 @@ php vendor/bin/easyswoole.php install
 > 注意，在部分环境下，例如 `Win10` 系统的 `docker` 环境。
 不可把虚拟机共享目录作为 `EasySwoole` 的 `Temp` 目录，将会因为权限不足无法创建 `socket`。这将产生报错：`listen xxxxxx.sock fail`， 为此可以手动在 `dev.php` 配置文件里把 `Temp` 目录（`TEMP_DIR`配置项）改为其他路径即可，如：`'/tmp'`。
 
-- 启动项目
+### 启动项目
 
 ```bash
 cd /var/www/project
@@ -55,19 +63,30 @@ php easyswoole.php server start
 
 支持的 `Dockerfile` 文件链接:
 
+### php 7.3.33
+
 -   [`php7.3.33-alpine3.12-base`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php7/7.3.33/alpine/3.12/base/Dockerfile)
 -   [`php7.3.33-alpine3.12-swoole-*`](https://github.com/XueSiLf/easyswoole-docker/tree/main/dockerfiles/php7/7.3.33/alpine/3.12/swoole/Dockerfile)，[`php7.3.33-alpine3.12-swoole4.4.26`](https://github.com/XueSiLf/easyswoole-docker/tree/main/dockerfiles/php7/7.3.33/alpine/3.12/swoole/4.4.26/Dockerfile)
 
--   [`php7.4.33-alpine3.15-base`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php7/7.3.33/alpine/3.15/base/Dockerfile)
+### php 7.4.33
+
+-   [`php7.4.33-alpine3.15-base`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php7/7.4.33/alpine/3.15/base/Dockerfile)
 -   [`php7.4.33-alpine3.15-swoole-*`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php7/7.4.33/alpine/3.15/swoole/Dockerfile)，[`php7.4.33-alpine3.15-swoole4.4.26`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php7/7.4.33/alpine/3.15/swoole/4.4.26/Dockerfile)
+
+### php 8.1.22
 
 -   [`php8.1.22-alpine3.16-base`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.1.22/alpine/3.16/base/Dockerfile)
 -   [`php8.1.22-alpine3.16-swoole-*`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.1.22/alpine/3.16/swoole/Dockerfile)，[`php8.1.22-alpine3.16-swoole5.0.3`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.1.22/alpine/3.16/swoole/5.0.3/Dockerfile)
 
--   [`php8.2.8-alpine3.18-base`](https://github.com/XueSiLf/easyswoole-docker/tree/main/dockerfiles/php8/8.2.8/alpine/3.18/base/Dockefile)
--   [`php8.2.8-alpine3.18-swoole-*`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.2.8/alpine/3.18/swoole/Dockerfile)，[`php8.2.8-alpine3.18-swoole5.0.3`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.2.8/alpine/3.18/swoole/5.0.3/Dockerfile)
+### php 8.2.8
 
+-   [`php8.2.8-alpine3.18-base`](https://github.com/XueSiLf/easyswoole-docker/tree/main/dockerfiles/php8/8.2.8/alpine/3.18/base/Dockerfile)
+-   [`php8.2.8-alpine3.18-swoole-*`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.2.8/alpine/3.18/swoole/Dockerfile)，[`php8.2.8-alpine3.18-swoole4.8.13`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.2.8/alpine/3.18/swoole/4.8.13/Dockerfile)，[`php8.2.8-alpine3.18-swoole5.1.1`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.2.8/alpine/3.18/swoole/5.1.1/Dockerfile)
 
+### php 8.2.14
+
+-   [`php8.2.14-alpine3.19-base`](https://github.com/XueSiLf/easyswoole-docker/tree/main/dockerfiles/php8/8.2.14/alpine/3.19/base/Dockerfile)
+-   [`php8.2.14-alpine3.19-swoole-*`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.2.14/alpine/3.19/swoole/Dockerfile)，[`php8.2.14-alpine3.19-swoole4.8.13`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.2.14/alpine/3.19/swoole/4.8.13/Dockerfile)，[`php8.2.14-alpine3.19-swoole5.1.1`](https://github.com/XueSiLf/easyswoole-docker/blob/main/dockerfiles/php8/8.2.14/alpine/3.19/swoole/5.1.1/Dockerfile)
 
 ## 快速查看
 
@@ -99,8 +118,11 @@ igbinary
 json
 libxml
 mbstring
+mongodb
+mysqli
 mysqlnd
 openssl
+pcntl
 pcre
 PDO
 pdo_mysql
@@ -122,7 +144,12 @@ sysvsem
 sysvshm
 tokenizer
 xml
+xmlreader
 xmlwriter
+Zend OPcache
 zip
 zlib
+
+[Zend Modules]
+Zend OPcache
 ```
