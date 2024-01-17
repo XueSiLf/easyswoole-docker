@@ -37,7 +37,7 @@ easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13
 cd /var/www/project
 composer require easyswoole/easyswoole
 php vendor/bin/easyswoole.php install
-# php vendor/bin/easyswoole install # 当你项目中的 EasySwoole 框架本不能低于 3.7.1 时
+# php vendor/bin/easyswoole install # 当你项目中的 EasySwoole 框架本低于 3.7.1 时
 ```
 
 > 注意，在部分环境下，例如 `Win10` 系统的 `docker` 环境。
@@ -48,7 +48,7 @@ php vendor/bin/easyswoole.php install
 ```bash
 cd /var/www/project
 php easyswoole.php server start
-# php easyswoole server start # 当你项目中的 EasySwoole 框架本不能低于 3.7.1 时
+# php easyswoole server start # 当你项目中的 EasySwoole 框架本低于 3.7.1 时
 ```
 
 接下来，就可以在宿主机 `/var/www/project` 中看到您安装好的代码了。 由于 `EasySwoole` 是持久化的 CLI 框架，当您修改完您的代码后，通过 `CTRL + C` 终止当前启动的进程实例，并重新执行 `php easyswoole server start` 启动命令即可。
