@@ -19,7 +19,7 @@ ARG COMPOSER_VERSION
 ##
 # ---------- env settings ----------
 ##
-ENV PHP_BUILD_VERSION="82"
+ENV PHP_BUILD_VERSION="83"
 ENV SWOOLE_VERSION=${SWOOLE_VERSION:-"5.1.1"} \
     COMPOSER_VERSION=${COMPOSER_VERSION:-"2.3.10"} \
     #  install and remove building packages
