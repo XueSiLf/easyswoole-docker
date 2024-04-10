@@ -1,4 +1,4 @@
-# Build image for easyswoolexuesi2021/easyswoole:php:8.1.27-alpine3.18-swoole4.8.13
+# Build image for easyswoolexuesi2021/easyswoole:php8.1.27-alpine3.18-swoole4.8.13
 #
 # @link     https://www.easyswoole.com
 # @document https://www.easyswoole.com

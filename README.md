@@ -18,19 +18,39 @@ docker run --name easyswoole \
 -p 9501:9501 -it \
 --privileged -u root \
 --entrypoint /bin/sh \
-easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13
+easyswoolexuesi2021/easyswoole:php8.2.17-alpine3.19.1-swoole5.1.1
 ```
 
 The public images you can choose from: 
+
+#### php 7.3
+
 - `easyswoolexuesi2021/easyswoole:php7.3.33-alpine3.12-swoole4.4.26`
+
+#### php 7.4
+
 - `easyswoolexuesi2021/easyswoole:php7.4.33-alpine3.15-swoole4.4.26`
+
+#### php 8.1
+
 - `easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13`
 - `easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole5.1.1`
+- `easyswoolexuesi2021/easyswoole:php8.1.27-alpine3.18-swoole4.8.13`
+- `easyswoolexuesi2021/easyswoole:php8.1.27-alpine3.18-swoole5.1.1`
+
+#### php 8.2
+
 - `easyswoolexuesi2021/easyswoole:php8.2.8-alpine3.18-swoole4.8.13`
 - `easyswoolexuesi2021/easyswoole:php8.2.8-alpine3.18-swoole5.1.1`
 - `easyswoolexuesi2021/easyswoole:php8.2.14-alpine3.19-swoole4.8.13`
 - `easyswoolexuesi2021/easyswoole:php8.2.14-alpine3.19-swoole5.1.1`
+- `easyswoolexuesi2021/easyswoole:php8.2.17-alpine3.19-swoole4.8.13`
+- `easyswoolexuesi2021/easyswoole:php8.2.17-alpine3.19-swoole5.1.1`
 
+#### php 8.3
+
+- `easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole4.8.13`
+- `easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole5.1.1`
 
 ### Create Project
 
