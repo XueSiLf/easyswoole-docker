@@ -5,7 +5,7 @@
 # @contact  https://www.easyswoole.com
 # @license  https://github.com/easy-swoole/easyswoole/blob/3.x/LICENSE
 
-FROM easyswoolexuesi2021/php8.3.4-alpine3.19
+FROM easyswoolexuesi2021/php:8.3.4-alpine3.19-base
 
 LABEL maintainer="EasySwoole Developers https://www.easyswoole.com" version="1.0" license="Apache 2.0"
 
