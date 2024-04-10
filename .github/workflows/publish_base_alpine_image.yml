@@ -1,9 +1,14 @@
 name: Build Base Alpine Images for EasySwoole
 
+#on:
+#  schedule:
+#    - cron: '47 4 * * *'
+#  workflow_dispatch:
+
 on:
-  schedule:
-    - cron: '47 4 * * *'
-  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
 
 jobs:
   build_base_alpine_images:
