@@ -18,7 +18,7 @@ docker run --name easyswoole \
 -p 9501:9501 -it \
 --privileged -u root \
 --entrypoint /bin/sh \
-easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13
+easyswoolexuesi2021/easyswoole:php8.2.17-alpine3.19-swoole5.1.1
 ```
 
 你可以选择公共镜像： 
@@ -49,7 +49,7 @@ easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13
 
 #### php 8.3
 
-- `easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole5.1.1`
+- `easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole5.1.2`
 
 ### 创建项目
 

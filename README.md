@@ -18,7 +18,7 @@ docker run --name easyswoole \
 -p 9501:9501 -it \
 --privileged -u root \
 --entrypoint /bin/sh \
-easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13
+easyswoolexuesi2021/easyswoole:php8.2.17-alpine3.19-swoole5.1.1
 ```
 
 The public images you can choose from: 
