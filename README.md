@@ -49,7 +49,7 @@ The public images you can choose from:
 
 #### php 8.3
 
-- `easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole5.1.1`
+- `easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole5.1.2`
 
 ### Create Project
 
