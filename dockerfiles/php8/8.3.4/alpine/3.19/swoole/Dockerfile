@@ -1,4 +1,4 @@
-# Build image for easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole5.1.1
+# Build image for easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole5.1.2
 #
 # @link     https://www.easyswoole.com
 # @document https://www.easyswoole.com
@@ -20,7 +20,7 @@ ARG COMPOSER_VERSION
 # ---------- env settings ----------
 ##
 ENV PHP_BUILD_VERSION="83"
-ENV SWOOLE_VERSION=${SWOOLE_VERSION:-"5.1.1"} \
+ENV SWOOLE_VERSION=${SWOOLE_VERSION:-"5.1.2"} \
     COMPOSER_VERSION=${COMPOSER_VERSION:-"2.3.10"} \
     #  install and remove building packages
     PHPIZE_DEPS="autoconf dpkg-dev dpkg file g++ gcc libc-dev make php${PHP_BUILD_VERSION}-dev php${PHP_BUILD_VERSION}-pear pkgconf re2c pcre-dev pcre2-dev zlib-dev libtool automake libaio-dev openssl-dev curl-dev"
