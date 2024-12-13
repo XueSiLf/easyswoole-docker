@@ -1,11 +1,11 @@
-# Build image for easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole5.1.2
+# Build image for easyswoolexuesi2021/easyswoole:php8.3.14-alpine3.21-swoole5.1.2
 #
 # @link     https://www.easyswoole.com
 # @document https://www.easyswoole.com
 # @contact  https://www.easyswoole.com
 # @license  https://github.com/easy-swoole/easyswoole/blob/3.x/LICENSE
 
-FROM easyswoolexuesi2021/php:8.3.4-alpine3.19-base
+FROM easyswoolexuesi2021/php:8.3.14-alpine3.21-base
 
 LABEL maintainer="EasySwoole Developers https://www.easyswoole.com" version="1.0" license="Apache 2.0"
 
