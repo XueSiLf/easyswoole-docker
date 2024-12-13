@@ -1,11 +1,11 @@
-# Build image for easyswoolexuesi2021/easyswoole:php8.3.14-alpine3.21-swoole5.1.6
+# Build image for easyswoolexuesi2021/easyswoole:php8.4.1-alpine3.21-swoole5.1.6
 #
 # @link     https://www.easyswoole.com
 # @document https://www.easyswoole.com
 # @contact  https://www.easyswoole.com
 # @license  https://github.com/easy-swoole/easyswoole/blob/3.x/LICENSE
 
-FROM easyswoolexuesi2021/php:8.3.14-alpine3.21-base
+FROM easyswoolexuesi2021/php:8.4.1-alpine3.21-base
 
 LABEL maintainer="EasySwoole Developers https://www.easyswoole.com" version="1.0" license="Apache 2.0"
 
@@ -19,7 +19,7 @@ ARG COMPOSER_VERSION
 ##
 # ---------- env settings ----------
 ##
-ENV PHP_BUILD_VERSION="83"
+ENV PHP_BUILD_VERSION="84"
 ENV SWOOLE_VERSION=${SWOOLE_VERSION:-"5.1.6"} \
     COMPOSER_VERSION=${COMPOSER_VERSION:-"2.3.10"} \
     #  install and remove building packages

@@ -1,4 +1,4 @@
-name: Build Versioned Alpine Images for EasySwoole PHP 8.3
+name: Build Versioned Alpine Images for EasySwoole PHP 8.4
 
 on:
   push:
@@ -12,13 +12,10 @@ jobs:
     strategy:
       matrix:
         include:
-#          - php: 8.3.4
-#            alpine: 3.19
-#            swoole: "5.1.2"
-#          - php: 8.3.14
-#            alpine: 3.21
-#            swoole: "5.1.2"
-          - php: 8.3.14
+          - php: 8.4.1
+            alpine: 3.21
+            swoole: "5.1.2"
+          - php: 8.4.1
             alpine: 3.21
             swoole: "5.1.6"
 
