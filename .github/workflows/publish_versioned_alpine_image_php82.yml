@@ -1,9 +1,9 @@
 name: Build Versioned Alpine Images for EasySwoole PHP 8.2
 
-#on:
-#  push:
-#    branches:
-#      - 'main'
+on:
+  push:
+    branches:
+      - 'main'
 
 jobs:
   build_versioned_alpine_images:
@@ -12,14 +12,23 @@ jobs:
     strategy:
       matrix:
         include:
-          - php: 8.2.17
-            alpine: 3.19
+#          - php: 8.2.17
+#            alpine: 3.19
+#            swoole: "4.8.13"
+#          - php: 8.2.17
+#            alpine: 3.19
+#            swoole: "5.0.3"
+#          - php: 8.2.17
+#            alpine: 3.19
+#            swoole: "5.1.1"
+          - php: 8.2.26
+            alpine: 3.21
             swoole: "4.8.13"
-          - php: 8.2.17
-            alpine: 3.19
+          - php: 8.2.26
+            alpine: 3.21
             swoole: "5.0.3"
-          - php: 8.2.17
-            alpine: 3.19
+          - php: 8.2.26
+            alpine: 3.21
             swoole: "5.1.1"
 
     name: The Alpine Image For EasySwoole PHP-${{ matrix.php }} Swoole-${{ matrix.swoole }}
