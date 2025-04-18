@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  easyswoole:
+    image: easyswoolexuesi2021/easyswoole:php8.1.22-alpine3.16-swoole4.8.13
+    container_name: easyswoole
+    volumes:
+      - ./:/var/www/project
+    ports:
+      - "9501:9501"
+    privileged: true
+    user: root
+    entrypoint: /bin/sh
+    tty: true
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      - easyswoole_net
+
+networks:
+  easyswoole_net:
+    driver: bridge
