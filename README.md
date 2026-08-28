@@ -1,3 +1,5 @@
+
+
 English | [中文](./README-CN.md)
 
 # easyswoole-docker
@@ -70,7 +72,7 @@ php easyswoole.php server start
 # php easyswoole server start # When the EasySwoole framework version in your project is less than 3.7.1.
 ```
 
-Next, you can see your installed project in `/var/www/project`. Since EasySwoole is a persistent CLI framework, when you have modified your code, you should terminate the running process instance with `CTRL + C` and re-execute the `php easyswoole server start` start startup command to restart your server and reload the code.
+Next, you can see your installed project in `/var/www/project`. Since EasySwoole is a persistent CLI framework, when you have modified your code, you should terminate the running process instance with `CTRL + C` and re-execute the `php easyswoole server start` startup command to restart your server and reload the code.
 
 ## Supported tags and respective Dockerfile links
 
