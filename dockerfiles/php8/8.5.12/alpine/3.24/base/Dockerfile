@@ -31,45 +31,45 @@ RUN set -ex \
     xz \
     tzdata \
     pcre \
-    php84 \
-    php84-bcmath \
-    php84-curl \
-    php84-ctype \
-    php84-dom \
-    php84-fileinfo \
-    php84-gd \
-    php84-iconv \
-    php84-json \
-    php84-mbstring \
-    php84-mysqli \
-    php84-mysqlnd \
-    php84-opcache \
-    php84-openssl \
-    php84-pcntl \
-    php84-pdo \
-    php84-pdo_mysql \
-    php84-pdo_sqlite \
-    php84-phar \
-    php84-posix \
-    php84-redis \
-    php84-simplexml \
-    php84-sockets \
-    php84-sodium \
-    php84-sysvshm \
-    php84-sysvmsg \
-    php84-sysvsem \
-    php84-tokenizer \
-    php84-zip \
-    php84-zlib \
-    php84-xml \
-    php84-xmlreader \
-    php84-xmlwriter \
-    php84-mongodb \
-    && ln -sf /usr/bin/php84 /usr/bin/php \
+    php85 \
+    php85-bcmath \
+    php85-curl \
+    php85-ctype \
+    php85-dom \
+    php85-fileinfo \
+    php85-gd \
+    php85-iconv \
+    php85-json \
+    php85-mbstring \
+    php85-mysqli \
+    php85-mysqlnd \
+    php85-opcache \
+    php85-openssl \
+    php85-pcntl \
+    php85-pdo \
+    php85-pdo_mysql \
+    php85-pdo_sqlite \
+    php85-phar \
+    php85-posix \
+    php85-redis \
+    php85-simplexml \
+    php85-sockets \
+    php85-sodium \
+    php85-sysvshm \
+    php85-sysvmsg \
+    php85-sysvsem \
+    php85-tokenizer \
+    php85-zip \
+    php85-zlib \
+    php85-xml \
+    php85-xmlreader \
+    php85-xmlwriter \
+    php85-mongodb \
+    && ln -sf /usr/bin/php85 /usr/bin/php \
     && apk del --purge *-dev \
-    && rm -rf /var/cache/apk/* /tmp/* /usr/share/man /usr/share/php84 \
+    && rm -rf /var/cache/apk/* /tmp/* /usr/share/man /usr/share/php85 \
     #  ---------- some config ----------
-    && cd /etc/php84 \
+    && cd /etc/php85 \
     # - config PHP
     && { \
         echo "upload_max_filesize=100M"; \

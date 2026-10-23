@@ -13,7 +13,7 @@ LABEL maintainer="EasySwoole Developers https://www.easyswoole.com" version="1.0
 # ---------- env settings ----------
 ##
 ENV PHP_BUILD_VERSION="84"
-ENV SWOOLE_VERSION="5.1.2" \
+ENV SWOOLE_VERSION="5.1.8" \
     COMPOSER_VERSION="2.10.3" \
     #  install and remove building packages
     PHPIZE_DEPS="autoconf dpkg-dev dpkg file g++ gcc libc-dev make php${PHP_BUILD_VERSION}-dev php${PHP_BUILD_VERSION}-pear pkgconf re2c pcre-dev pcre2-dev zlib-dev libtool automake libaio-dev openssl-dev curl-dev"
