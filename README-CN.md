@@ -51,6 +51,14 @@ easyswoolexuesi2021/easyswoole:php8.2.17-alpine3.19-swoole5.1.1
 
 - `easyswoolexuesi2021/easyswoole:php8.3.4-alpine3.19-swoole5.1.2`
 
+#### php 8.4
+
+- `easyswoolexuesi2021/easyswoole:php8.4.27-alpine3.24-swoole6.2.2`
+
+#### php 8.5
+
+- `easyswoolexuesi2021/easyswoole:php8.5.12-alpine3.24-swoole6.2.2`
+
 ### 创建项目
 
 ```bash

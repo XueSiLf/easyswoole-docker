@@ -53,13 +53,11 @@ The public images you can choose from:
 
 #### php 8.4
 
-- `easyswoolexuesi2021/easyswoole:php8.4.27-alpine3.24-swoole5.1.8`
-- `easyswoolexuesi2021/easyswoole:php8.4.27-alpine3.24-swoole6.2.3`
+- `easyswoolexuesi2021/easyswoole:php8.4.27-alpine3.24-swoole6.2.2`
 
 #### php 8.5
 
-- `easyswoolexuesi2021/easyswoole:php8.5.12-alpine3.24-swoole5.1.8`
-- `easyswoolexuesi2021/easyswoole:php8.5.12-alpine3.24-swoole6.2.3`
+- `easyswoolexuesi2021/easyswoole:php8.5.12-alpine3.24-swoole6.2.2`
 
 ### Create Project
 
