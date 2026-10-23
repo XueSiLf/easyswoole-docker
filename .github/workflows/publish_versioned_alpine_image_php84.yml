@@ -12,12 +12,18 @@ jobs:
     strategy:
       matrix:
         include:
-          - php: 8.4.1
-            alpine: 3.21
-            swoole: "5.1.2"
-          - php: 8.4.1
-            alpine: 3.21
-            swoole: "5.1.6"
+#          - php: 8.4.1
+#            alpine: 3.21
+#            swoole: "5.1.2"
+#          - php: 8.4.1
+#            alpine: 3.21
+#            swoole: "5.1.6"
+          - php: 8.4.27
+            alpine: 3.24
+            swoole: "5.1.8"
+          - php: 8.4.27
+            alpine: 3.24
+            swoole: "6.2.3"
 
     name: The Alpine Image For EasySwoole PHP-${{ matrix.php }} Swoole-${{ matrix.swoole }}
 

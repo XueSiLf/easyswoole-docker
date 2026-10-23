@@ -43,6 +43,12 @@ jobs:
 #          - php-prefix: "8"
 #            php: "8.4.1"
 #            alpine: "3.21"
+          - php-prefix: "8"
+            php: "8.4.27"
+            alpine: "3.24"
+          - php-prefix: "8"
+            php: "8.5.12"
+            alpine: "3.24"
 
     steps:
       - name: Checkout
