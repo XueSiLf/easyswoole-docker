@@ -43,7 +43,6 @@ RUN set -ex \
     php85-mbstring \
     php85-mysqli \
     php85-mysqlnd \
-    php85-opcache \
     php85-openssl \
     php85-pcntl \
     php85-pdo \
