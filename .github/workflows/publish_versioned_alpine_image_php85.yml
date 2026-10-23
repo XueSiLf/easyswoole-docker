@@ -1,4 +1,4 @@
-name: Build Versioned Alpine Images for EasySwoole PHP 8.4
+name: Build Versioned Alpine Images for EasySwoole PHP 8.5
 
 on:
   push:
