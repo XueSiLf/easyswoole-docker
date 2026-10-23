@@ -20,10 +20,7 @@ jobs:
 #            swoole: "5.1.6"
           - php: 8.4.27
             alpine: 3.24
-            swoole: "5.1.8"
-          - php: 8.4.27
-            alpine: 3.24
-            swoole: "6.2.3"
+            swoole: "6.2.2"
 
     name: The Alpine Image For EasySwoole PHP-${{ matrix.php }} Swoole-${{ matrix.swoole }}
 
