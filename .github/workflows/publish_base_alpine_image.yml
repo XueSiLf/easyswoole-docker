@@ -45,7 +45,7 @@ jobs:
 #            alpine: "3.21"
           - php-prefix: "8"
             php: "8.3.36"
-            alpine: "3.22"
+            alpine: "3.24"
 #          - php-prefix: "8"
 #            php: "8.4.1"
 #            alpine: "3.21"
