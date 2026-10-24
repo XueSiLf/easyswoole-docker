@@ -3,7 +3,7 @@ name: Build Base Alpine Images for EasySwoole
 on:
   push:
     branches:
-      - 'main'
+      - 'dev'
 
 jobs:
   build_base_alpine_images:
@@ -34,21 +34,27 @@ jobs:
 #          - php-prefix: "8"
 #            php: "8.2.26"
 #            alpine: "3.21"
+          - php-prefix: "8"
+            php: "8.2.35"
+            alpine: "3.22"
 #          - php-prefix: "8"
 #            php: "8.3.4"
 #            alpine: "3.19"
 #          - php-prefix: "8"
 #            php: "8.3.14"
 #            alpine: "3.21"
+          - php-prefix: "8"
+            php: "8.3.36"
+            alpine: "3.22"
 #          - php-prefix: "8"
 #            php: "8.4.1"
 #            alpine: "3.21"
 #          - php-prefix: "8"
 #            php: "8.4.27"
 #            alpine: "3.24"
-          - php-prefix: "8"
-            php: "8.5.12"
-            alpine: "3.24"
+#          - php-prefix: "8"
+#            php: "8.5.12"
+#            alpine: "3.24"
 
     steps:
       - name: Checkout
